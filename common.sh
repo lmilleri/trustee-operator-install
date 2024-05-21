@@ -32,9 +32,18 @@ function wait_for_deployment() {
 
 # Function to apply the operator manifests
 function apply_operator_manifests() {
+    
     # Apply the manifests, error exit if any of them fail
     oc apply -f ns.yaml || exit 1
-    oc apply -f kbs_catalog.yaml || exit 1
+    if [[ $CLUSTER == "k8s" ]] then
+      oc apply -f kbs_catalog.yaml || exit 1
+    else
+      oc apply -f kbs_catalog-ocp.yaml || exit 1
+    fi
     oc apply -f og.yaml || exit 1
-    oc apply -f subs.yaml || exit 1
+    if [[ $CLUSTER == "k8s" ]] then
+      oc apply -f subs.yaml || exit 1
+    else
+      oc apply -f subs-ocp.yaml || exit 1
+    fi
 }
