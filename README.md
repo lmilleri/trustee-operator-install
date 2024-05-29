@@ -9,6 +9,7 @@ the following changes
 For installing the trustee operator:
 - k8s: run `install.sh`
 - OpenShift: run `CLUSTER=OCP install.sh`
+Note: specify the `MICRO=yes` option for deploying as microservices
 
 Check for operator controller manager in `kbs-operator-system` namespace
 

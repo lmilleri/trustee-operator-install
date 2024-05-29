@@ -36,9 +36,17 @@ function apply_operator_manifests() {
     # Apply the manifests, error exit if any of them fail
     oc apply -f ns.yaml || exit 1
     if [[ $CLUSTER == "k8s" ]] then
-      oc apply -f kbs_catalog.yaml || exit 1
+      if [[ $MICRO == "yes" ]] then
+        oc apply -f kbs_catalog-micro.yaml || exit 1
+      else
+        oc apply -f kbs_catalog.yaml || exit 1
+      fi
     else
-      oc apply -f kbs_catalog-ocp.yaml || exit 1
+      if [[ $MICRO == "yes" ]] then
+        oc apply -f kbs_catalog-ocp-micro.yaml || exit 1
+      else
+        oc apply -f kbs_catalog-ocp.yaml || exit 1
+      fi
     fi
     oc apply -f og.yaml || exit 1
     if [[ $CLUSTER == "k8s" ]] then

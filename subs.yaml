@@ -8,9 +8,5 @@ spec:
   installPlanApproval: Automatic
   name: kbs-operator
   source: kbs-operator-catalog
-
-  # uncomment it for OCP (and comment the line below)
-  #sourceNamespace: openshift-marketplace
   sourceNamespace: olm
-  
   startingCSV: kbs-operator.v0.0.1
