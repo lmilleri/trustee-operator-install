@@ -7,7 +7,7 @@ the following changes
 - Change the `oc` command to `kubectl` or create a temporary alias
 
 For installing the trustee operator:
-- k8s: just run `install.sh`
+- k8s: run `install.sh`
 - OpenShift: run `CLUSTER=OCP install.sh`
 
 Check for operator controller manager in `kbs-operator-system` namespace
@@ -22,6 +22,7 @@ For microservices deployment:
 
 Then type:
 `./configure.sh` for creating the key pair and configure trustee.
+Note: if you want to enable HTTPS, you'd need to type `HTTPS=yes ./configure.sh` instead.
 
 
 Get the KBS deployment pod name
@@ -51,6 +52,7 @@ oc apply -f kbsclient-sim.yaml
 ## Run tests
 From inside the all-in-one or microservices dir, you can run some basic tests with the command:
 `./test.sh`
+Note: if HTTPS is enabled you'd need to run `./test-https.sh`
 
 ## Get secret resource from Trustee
 
