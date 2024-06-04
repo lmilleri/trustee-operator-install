@@ -6,7 +6,7 @@ metadata:
 spec:
   channel: alpha
   installPlanApproval: Automatic
-  name: kbs-operator
+  name: trustee-operator
   source: kbs-operator-catalog
   sourceNamespace: olm
-  startingCSV: kbs-operator.v0.0.1
+  startingCSV: trustee-operator.v0.0.1
