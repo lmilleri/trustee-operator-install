@@ -10,8 +10,8 @@ metadata:
   name: kbsconfig-sample
   namespace: kbs-operator-system
 spec:
-  kbsConfigMapName: kbs-config
+  kbsConfigMapName: kbs-config-sample
   kbsAuthSecretName: kbs-auth-public-key
   kbsDeploymentType: AllInOneDeployment
-  kbsRvpsRefValuesConfigMapName: rvps-reference-values
+  kbsRvpsRefValuesConfigMapName: rvps-reference-values-sample
   kbsSecretResources: ["kbsres1"]

@@ -11,4 +11,4 @@ check_oc
 # Apply the operator manifests
 apply_operator_manifests $CLUSTER $MICRO
 
-wait_for_deployment kbs-operator-controller-manager kbs-operator-system || exit 1
+wait_for_deployment trustee-operator-controller-manager kbs-operator-system || exit 1

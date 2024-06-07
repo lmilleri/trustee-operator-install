@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kbs-config
+  name: kbs-config-sample
   namespace: kbs-operator-system
 data:
   kbs-config.json: |
     {
         "insecure_http" : true,
         "sockets": ["0.0.0.0:8080"],
-        "auth_public_key": "/etc/auth-secret/publicKey",
+        "auth_public_key": "/etc/auth-secret/kbs.pem",
         "attestation_token_config": {
           "attestation_token_type": "CoCo"
         },
