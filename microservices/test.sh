@@ -1,6 +1,3 @@
-POD_NAME=$(oc get pods -l app=kbs -o jsonpath='{.items[0].metadata.name}' -n kbs-operator-system)
-oc exec -n kbs-operator-system -it $POD_NAME -c kbs -- sed -i 's/false/true/g' /opt/confidential-containers/opa/policy.rego
-
 oc cp privateKey kbs-client:/
 echo "Hello!" > my-secret
 oc cp my-secret kbs-client:/

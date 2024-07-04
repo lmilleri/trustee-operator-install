@@ -11,4 +11,5 @@ podman run -it \
 -v ./secret:/opt/confidential-containers/kbs/repository/default/secrets/secret:Z,U \
 -p 8080:8080 \
 --rm \
+-e=RUST_LOG=debug \
 quay.io/openshift_sandboxed_containers/kbs:latest /usr/local/bin/kbs --config-file /etc/kbs-config/kbs-config.json

@@ -1,9 +1,7 @@
 
 package policy
 
-default allow = true
-
+default allow = false
 allow {
-	input["tee"] != "sample"
+        input["tcb-status"]["sample.svn"] == "1"
 }
-

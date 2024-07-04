@@ -18,3 +18,6 @@ spec:
   # HTTPS support
   kbsHttpsKeySecretName: kbs-https-key
   kbsHttpsCertSecretName: kbs-https-certificate
+  kbsResourcePolicyConfigMapName: resource-policy-sample
+  tdxConfigSpec:
+    kbsTdxConfigMapName: tdx-config-sample

@@ -16,5 +16,8 @@ spec:
   kbsAuthSecretName: kbs-auth-public-key
   kbsServiceType: ClusterIP
   kbsDeploymentType: MicroservicesDeployment
-  kbsRvpsRefValuesConfigMapName: rvps-reference-values
+  kbsRvpsRefValuesConfigMapName: rvps-reference-values-sample
   kbsSecretResources: ["kbsres1"]
+  kbsResourcePolicyConfigMapName: resource-policy-sample
+  tdxConfigSpec:
+    kbsTdxConfigMapName: tdx-config-sample

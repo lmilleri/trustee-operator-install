@@ -39,13 +39,15 @@ function apply_operator_manifests() {
       if [[ $MICRO == "yes" ]] then
         oc apply -f kbs_catalog-micro.yaml || exit 1
       else
-        oc apply -f kbs_catalog.yaml || exit 1
+        oc apply -f kbs_catalog-lmilleri.yaml || exit 1
+        #oc apply -f kbs_catalog.yaml || exit 1
       fi
     else
       if [[ $MICRO == "yes" ]] then
         oc apply -f kbs_catalog-ocp-micro.yaml || exit 1
       else
-        oc apply -f kbs_catalog-ocp.yaml || exit 1
+        oc apply -f kbs_catalog-ocp-lmilleri.yaml || exit 1
+        #oc apply -f kbs_catalog-ocp.yaml || exit 1
       fi
     fi
     oc apply -f og.yaml || exit 1

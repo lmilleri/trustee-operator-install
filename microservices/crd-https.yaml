@@ -16,9 +16,11 @@ spec:
   kbsAuthSecretName: kbs-auth-public-key
   kbsServiceType: ClusterIP
   kbsDeploymentType: MicroservicesDeployment
-  kbsRvpsRefValuesConfigMapName: rvps-reference-values
+  kbsRvpsRefValuesConfigMapName: rvps-reference-values-sample
   kbsSecretResources: ["kbsres1"]
   # HTTPS support
   kbsHttpsKeySecretName: kbs-https-key
   kbsHttpsCertSecretName: kbs-https-certificate
-
+  kbsResourcePolicyConfigMapName: resource-policy-sample
+  tdxConfigSpec:
+    kbsTdxConfigMapName: tdx-config-sample
